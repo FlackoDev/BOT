@@ -43,6 +43,16 @@ bot.on("message", async (message) => {
             })
             break;
         }
+        
+        case 'pizza' : {
+            await callSong(user, command, message, "Pizza.mp3")
+            break;
+        }
+
+        case 'andrea' : {
+            await callSong(user, command, message, "BIANCO.mp3")
+            break;
+        }
 
         // Music things
         case "stop" : {
