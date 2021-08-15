@@ -98,7 +98,7 @@ async function callSong(user, command, message, songName) {
     if(user.voice.channel) {
         message.channel.send("SONG È STUPIDIE")
         let connection = await user.voice.channel.join()
-        let disp = connection.play(__dirname + "/MUSIC/" + command)
+        let disp = connection.play(__dirname + "/MUSIC/" + songName)
 
         disp.on("start", () => {
             console.log("Start a song (%s)", command)
@@ -107,7 +107,7 @@ async function callSong(user, command, message, songName) {
         disp.on("speaking", (speaking) => {
             if (!speaking) {
                 if(isLoop) {
-                    console.log('Looping song %s', songName)
+                    console.log('Looping song %s', command)
                     connection.play(__dirname + "/MUSIC/" + songName)
                 } else {
                     console.log("End a song (%s)", command)
