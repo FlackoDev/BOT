@@ -1,7 +1,6 @@
 //(Production) npm run start
 //(Development) npm run dev
 
-
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = "..";
@@ -11,7 +10,7 @@ require("dotenv").config();
 /* ################################# */
 
 bot.on('ready', () => {
-    bot.user.setActivity('Gucci Boi Gang', { type: 'WATCHING' })
+    bot.user.setActivity('Le Fiche Bianche', { type: 'WATCHING' })
     console.log(`Logged in as ${bot.user.tag}!`);
 });
 
@@ -105,3 +104,16 @@ async function callSong(user, command, message, songName) {
 /* ################################# */
 
 bot.login(process.env.TOKEN);
+
+/* ################################# */
+
+const express = require('express')
+const app = express()
+
+app.all('*', (req, res) => {
+    res.send("GUCCI BOI HERE!")
+})
+
+app.listen(3000, () => {
+    console.log("Web server started on port 3000")
+})
