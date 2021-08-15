@@ -3,12 +3,11 @@
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const prefix = "..";
+const prefix = "-";
 
 require("dotenv").config();
 
 /* ################################# */
-let isPlaying = false
 let isLoop = false
 
 bot.on('ready', () => {
@@ -35,7 +34,15 @@ bot.on("message", async (message) => {
         case 'cinese' : {
             await callSong(user, command, message,  "ANDREA.mp3")
             break;
-        }        
+        }    
+        case 'fame' : {
+            await callSong(user, command, message,  "fame.mp3")
+            break;
+        }  
+        case 'raulo' : {
+            await callSong(user, command, message,  "raulo.mp3")
+            break;
+        } 
         case 'catafratto' : {
             message.channel.send("<@" + message.author.id + ">, COME ANDREA", {
                 files: [{
@@ -45,12 +52,10 @@ bot.on("message", async (message) => {
             })
             break;
         }
-        
         case 'pizza' : {
             await callSong(user, command, message, "Pizza.mp3")
             break;
         }
-
         case 'andrea' : {
             await callSong(user, command, message, "Bianco.mp3")
             break;
@@ -65,7 +70,6 @@ bot.on("message", async (message) => {
                 message.channel.send("SONG È STUPIDIE")
                 let connection = await user.voice.channel.join()
                 if(connection) {
-                    console.log("Stopped a song (%s)", command)
                     connection.disconnect()
                 }
             } else {
@@ -79,16 +83,17 @@ bot.on("message", async (message) => {
                 if(isLoop) {
                     isLoop = false
                     message.channel.send("Loop disattivato!")
+                    console.log("Loop disactivated")
                 } else {
                     isLoop = true
                     message.channel.send("Loop attivato!")
+                    console.log("Loop activated")
                 }
             } else {
                 message.channel.send("Devi essere in una chat vocale!")
             }
             break;
         }
-
     }
 });
 
@@ -96,7 +101,12 @@ bot.on("message", async (message) => {
 
 async function callSong(user, command, message, songName) {
     if(user.voice.channel) {
-        message.channel.send("SONG È STUPIDIE")
+        message.channel.send("SONG È STUPIDIE").then((sent) => {
+            setTimeout(() => {
+              sent.delete();
+            }, 1000 * 2);
+        });
+
         let connection = await user.voice.channel.join()
         let disp = connection.play(__dirname + "/MUSIC/" + songName)
 
@@ -104,10 +114,11 @@ async function callSong(user, command, message, songName) {
             console.log("Start a song (%s)", command)
             isPlaying = true
         })
+
         disp.on("speaking", (speaking) => {
-            if (!speaking) {
+            if (speaking == 0) {
                 if(isLoop) {
-                    console.log('Looping song %s', command)
+                    console.log('Looping a song (%s)', command)
                     connection.play(__dirname + "/MUSIC/" + songName)
                 } else {
                     console.log("End a song (%s)", command)
