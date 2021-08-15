@@ -52,7 +52,7 @@ bot.on("message", async (message) => {
         }
 
         case 'andrea' : {
-            await callSong(user, command, message, "BIANCO.mp3")
+            await callSong(user, command, message, "Bianco.mp3")
             break;
         }
 
