@@ -56,7 +56,10 @@ bot.on("message", async (message) => {
             break;
         }
 
+        /* ################################# */
         // Music things
+        /* ################################# */
+
         case "stop" : {
             if(user.voice.channel) {
                 message.channel.send("SONG È STUPIDIE")
