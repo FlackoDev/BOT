@@ -43,6 +43,15 @@ bot.on("message", async (message) => {
             await callSong(user, command, message,  "raulo.mp3")
             break;
         } 
+        case 'nonna_macu' : {
+            message.channel.send("<@" + message.author.id + ">, ECCOTI LA NONNA DI MACUGLIA", {
+                files: [{
+                    attachment: __dirname + '/IMAGE/' + 'nonna.gif',
+                    name: 'nonna.gif'
+                }]
+            })
+            break;
+        }
         case 'catafratto' : {
             message.channel.send("<@" + message.author.id + ">, COME ANDREA", {
                 files: [{
