@@ -104,16 +104,3 @@ async function callSong(user, command, message, songName) {
 /* ################################# */
 
 bot.login(process.env.TOKEN);
-
-/* ################################# */
-
-const express = require('express')
-const app = express()
-
-app.all('*', (req, res) => {
-    res.send("GUCCI BOI HERE!")
-})
-
-app.listen(3000, () => {
-    console.log("Web server started on port 3000")
-})
