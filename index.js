@@ -3,6 +3,8 @@
 
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const mm = require('music-metadata');
+
 const prefix = "-";
 
 require("dotenv").config();
@@ -69,6 +71,44 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "Bianco.mp3")
             break;
         }
+        case 'jackie' : {
+            message.channel.send("<@" + message.author.id + ">, ECCOTI IL PAPÀ DI JACKIE", {
+                files: [{
+                    attachment: __dirname + '/IMAGE/' + 'jackie.gif',
+                    name: 'jackie.gif'
+                }]
+            })
+            break;
+        }
+        case 'willi' : {
+            message.channel.send("<@" + message.author.id + ">, Beccati un Willi", {
+                files: [{
+                    attachment: __dirname + '/IMAGE/' + 'Willi.gif',
+                    name: 'Willi.gif'
+                }]
+            }).then(async () => {
+                await callSong(user, command, message, "Willi.mp3")
+            })
+            break;
+        }
+        case "vola" : {
+            message.channel.send("<@" + message.author.id + ">, ECCO COME VOLARE", {
+                files: [{
+                    attachment: __dirname + '/VIDEO/' + 'negro_vola.mp4',
+                    name: 'negro_vola.mp4'
+                }]
+            })
+            break;
+        }
+        case "mark's_pizzeria" : {
+            message.channel.send("<@" + message.author.id + ">, ECCOTI LA MIGLIORE PIZZERIA ", {
+                files: [{
+                    attachment: __dirname + '/VIDEO/' + 'mark.mp4',
+                    name: 'mark.mp4'
+                }]
+            })
+            break;
+        } 
 
         /* ################################# */
         // Music things
@@ -91,11 +131,19 @@ bot.on("message", async (message) => {
             if(user.voice.channel) {
                 if(isLoop) {
                     isLoop = false
-                    message.channel.send("Loop disattivato!")
+                    message.channel.send("Loop disattivato!").then((sent) => {
+                        setTimeout(() => {
+                          sent.delete();
+                        }, 1000 * 2);
+                    });
                     console.log("Loop disactivated")
                 } else {
                     isLoop = true
-                    message.channel.send("Loop attivato!")
+                    message.channel.send("Loop Attivato!").then((sent) => {
+                        setTimeout(() => {
+                          sent.delete();
+                        }, 1000 * 2);
+                    });
                     console.log("Loop activated")
                 }
             } else {
@@ -119,23 +167,24 @@ async function callSong(user, command, message, songName) {
         let connection = await user.voice.channel.join()
         let disp = connection.play(__dirname + "/MUSIC/" + songName)
 
+        let metadata = await mm.parseFile(__dirname + "/MUSIC/" + songName)
+        let duration = metadata.format.duration * 1000
+
         disp.on("start", () => {
             console.log("Start a song (%s)", command)
             isPlaying = true
         })
 
-        disp.on("speaking", (speaking) => {
-            if (speaking == 0) {
-                if(isLoop) {
-                    console.log('Looping a song (%s)', command)
-                    connection.play(__dirname + "/MUSIC/" + songName)
-                } else {
-                    console.log("End a song (%s)", command)
-                    isPlaying = false
-                    connection.disconnect()
-                }
+        let intr = setInterval(function() {
+            if(isLoop) {
+                connection.play(__dirname + "/MUSIC/" + songName)
+                console.log("Looping a song (%s)", command)
+            } else {
+                clearInterval(intr)
+                connection.disconnect()
+                console.log("End a song (%s)", command)
             }
-        });
+        }, duration + 1000)
     } else {
         message.channel.send("Devi essere in una chat vocale!")
     }
