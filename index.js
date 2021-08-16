@@ -81,7 +81,7 @@ bot.on("message", async (message) => {
             break;
         }
         case 'willi' : {
-            message.channel.send("<@" + message.author.id + ">, Beccati un Willi", {
+            message.channel.send("<@" + message.author.id + ">, BECCATI UN **WILLI**", {
                 files: [{
                     attachment: __dirname + '/IMAGE/' + 'Willi.gif',
                     name: 'Willi.gif'
@@ -108,7 +108,16 @@ bot.on("message", async (message) => {
                 }]
             })
             break;
-        } 
+        }
+        case "er(mano)" : {
+            message.channel.send("<@" + message.author.id + ">, ECCOTI IL CUOCERE", {
+                files: [{
+                    attachment: __dirname + '/IMAGE/' + 'er(mano).png',
+                    name: 'er(manno).png'
+                }]
+            })
+            break;
+        }
 
         /* ################################# */
         // Music things
