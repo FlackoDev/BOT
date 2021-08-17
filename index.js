@@ -91,6 +91,17 @@ bot.on("message", async (message) => {
             })
             break;
         }
+        case "miky" : {
+            message.channel.send("MIKY SI FA ").then((sent) => {
+                setTimeout(() => {
+                  sent.delete();
+                }, 1000 * 5);
+            }).then(async () => {
+                await callSong(user, command, message, "sega.mp3")
+            })
+            break;
+        }
+
         case "vola" : {
             message.channel.send("<@" + message.author.id + ">, ECCO COME VOLARE", {
                 files: [{
@@ -100,6 +111,16 @@ bot.on("message", async (message) => {
             })
             break;
         }
+        case "giusè" : {
+            await callSong(user, command, message, "Giuse.mp3")
+            break;
+        }
+        
+        case "mussolini" : {
+            await callSong(user, command, message, "bello.mp3")
+            break;
+        }
+        
         case "mark's_pizzeria" : {
             message.channel.send("<@" + message.author.id + ">, ECCOTI LA MIGLIORE PIZZERIA ", {
                 files: [{
