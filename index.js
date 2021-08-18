@@ -97,7 +97,7 @@ bot.on("message", async (message) => {
                   sent.delete();
                 }, 1000 * 5);
             }).then(async () => {
-                await callSong(user, command, message, "Sega.mp3")
+                await callSong(user, command, message, "Sega_Tramurt.mp3")
             })
             break;
         }
