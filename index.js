@@ -29,7 +29,7 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "SONG.mp3")
             break;
         }
-        case "fifa_17" : {
+        case "fifa17" : {
             await callSong(user, command, message, "FIFA_17.mp3")
             break;
         }
@@ -109,6 +109,10 @@ bot.on("message", async (message) => {
                     name: 'negro_vola.mp4'
                 }]
             })
+            break;
+        }
+        case 'fifa20' : {
+            await callSong(user, command, message, "FIFA20.mp3")
             break;
         }
         case "giusè" : {
