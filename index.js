@@ -63,6 +63,15 @@ bot.on("message", async (message) => {
             })
             break;
         }
+        case "feng":{
+            message.channel.send("<@" + message.author.id + ">, TI PRESENTO QUEL NABBO DI FENG", {
+                files: [{
+                    attachment: __dirname + '/IMAGE/' + 'feng.png',
+                    name: 'feng.png'
+                }]
+            })
+            break;
+        }
         case 'pizza' : {
             await callSong(user, command, message, "Pizza.mp3")
             break;
