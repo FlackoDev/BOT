@@ -152,6 +152,16 @@ bot.on("message", async (message) => {
             })
             break;
         }
+        case "temp": {
+            message.channel.send("**SOLUZIONI INSIGHT**", {
+                files: [{
+                    attachment: __dirname + '/TEMP/' + 'insight.pdf',
+                    name: 'insight.pdf'
+                }]
+            })
+            break;
+
+        }
 
         /* ################################# */
         // Music things
