@@ -152,15 +152,14 @@ bot.on("message", async (message) => {
             })
             break;
         }
-        case "skopando": {
+        case "skopando" : {
             await callSong(user, command, message, "skopo.mp3")
             break;
-
         }
-        case "neopatentato": {
+        
+        case "neopatentato" : {
             await callSong(user, command, message, "neopatentato.mp3")
             break;
-
         }
 
         /* ################################# */
