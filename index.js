@@ -152,13 +152,13 @@ bot.on("message", async (message) => {
             })
             break;
         }
-        case "temp": {
-            message.channel.send("**SOLUZIONI INSIGHT**", {
-                files: [{
-                    attachment: __dirname + '/TEMP/' + 'insight.pdf',
-                    name: 'insight.pdf'
-                }]
-            })
+        case "skopando": {
+            await callSong(user, command, message, "skopo.mp3")
+            break;
+
+        }
+        case "neopatentato": {
+            await callSong(user, command, message, "neopatentato.mp3")
             break;
 
         }
