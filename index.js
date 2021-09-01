@@ -26,23 +26,23 @@ bot.on("message", async (message) => {
 
     switch(command.toLowerCase()) {
         case 'vaffanchiulo' : {
-            await callSong(user, command, message, "SONG.mp3")
+            await callSong(user, command, message, "SONG.mp3", true)
             break;
         }
         case "fifa17" : {
-            await callSong(user, command, message, "FIFA_17.mp3")
+            await callSong(user, command, message, "FIFA_17.mp3", true)
             break;
         }
         case 'cinese' : {
-            await callSong(user, command, message,  "ANDREA.mp3")
+            await callSong(user, command, message,  "ANDREA.mp3", true)
             break;
         }    
         case 'fame' : {
-            await callSong(user, command, message,  "fame.mp3")
+            await callSong(user, command, message,  "fame.mp3", true)
             break;
         }  
         case 'raulo' : {
-            await callSong(user, command, message,  "raulo.mp3")
+            await callSong(user, command, message,  "raulo.mp3", true)
             break;
         } 
         case 'nonna_macu' : {
@@ -73,11 +73,11 @@ bot.on("message", async (message) => {
             break;
         }
         case 'pizza' : {
-            await callSong(user, command, message, "Pizza.mp3")
+            await callSong(user, command, message, "Pizza.mp3", true)
             break;
         }
         case 'andrea' : {
-            await callSong(user, command, message, "Bianco.mp3")
+            await callSong(user, command, message, "Bianco.mp3", true)
             break;
         }
         case 'jackie' : {
@@ -96,7 +96,7 @@ bot.on("message", async (message) => {
                     name: 'Willi.gif'
                 }]
             }).then(async () => {
-                await callSong(user, command, message, "Willi.mp3")
+                await callSong(user, command, message, "Willi.mp3", true)
             })
             break;
         }
@@ -106,7 +106,7 @@ bot.on("message", async (message) => {
                   sent.delete();
                 }, 1000 * 5);
             }).then(async () => {
-                await callSong(user, command, message, "Sega_Tramurt.mp3")
+                await callSong(user, command, message, "Sega_Tramurt.mp3", false)
             })
             break;
         }
@@ -121,16 +121,16 @@ bot.on("message", async (message) => {
             break;
         }
         case 'fifa20' : {
-            await callSong(user, command, message, "FIFA20.mp3")
+            await callSong(user, command, message, "FIFA20.mp3", true)
             break;
         }
         case "giusè" : {
-            await callSong(user, command, message, "Giuse.mp3")
+            await callSong(user, command, message, "Giuse.mp3", true)
             break;
         }
         
         case "mussolini" : {
-            await callSong(user, command, message, "bello.mp3")
+            await callSong(user, command, message, "bello.mp3", true)
             break;
         }
         
@@ -153,12 +153,12 @@ bot.on("message", async (message) => {
             break;
         }
         case "skopando" : {
-            await callSong(user, command, message, "skopo.mp3")
+            await callSong(user, command, message, "skopo.mp3", true)
             break;
         }
         
         case "neopatentato" : {
-            await callSong(user, command, message, "neopatentato.mp3")
+            await callSong(user, command, message, "neopatentato.mp3", true)
             break;
         }
 
@@ -335,13 +335,15 @@ bot.on("message", async (message) => {
 
 /* ################################# */
 
-async function callSong(user, command, message, songName) {
+async function callSong(user, command, message, songName, sendSongText) {
     if(user.voice.channel) {
-        message.channel.send("SONG È STUPIDIE").then((sent) => {
-            setTimeout(() => {
-              sent.delete();
-            }, 1000 * 2);
-        });
+        if(sendSongText) {
+            message.channel.send("SONG È STUPIDIE").then((sent) => {
+                setTimeout(() => {
+                  sent.delete();
+                }, 1000 * 2);
+            });
+        }
 
         let connection = await user.voice.channel.join()
         let disp = connection.play(__dirname + "/MUSIC/" + songName)
