@@ -163,6 +163,133 @@ bot.on("message", async (message) => {
         }
 
         /* ################################# */
+        // Usefull things
+        /* ################################# */
+
+        case "aiudame" : {
+            const embed = new Discord.MessageEmbed({
+                "title": "Aiudame",
+                "description" : "Ecct i comandi GUCCI \nPrefix comandi -> ' **" + prefix + "** '\n\n\n **Lista Comandi**",
+                "color": 53380,
+                "fields": [
+                    {
+                    "name": "vaffanchiulo",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "fifa17",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "cinese",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "fame",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "raulo",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "nonna_macu",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "catafratto",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "feng",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "pizza",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "andrea",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "jackie",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "willi",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "miky",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "vola",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "fifa20",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "giusè",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "mussolini",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "mark's_pizzeria",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "er(mano)",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "skopando",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "neopatentato",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "aiudame",
+                    "value": "‎",
+                    "inline": true
+                    }
+                ]
+            });
+            
+            message.channel.send(embed)
+            break;
+        }
+
+        /* ################################# */
         // Music things
         /* ################################# */
 
