@@ -161,6 +161,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "neopatentato.mp3", true)
             break;
         }
+        case "giovedì" : {
+            await callSong(user, command, message, "for_gucci_boy.mp3", true)
+            break;
+        }
 
         /* ################################# */
         // Usefull things
