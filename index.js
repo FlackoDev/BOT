@@ -173,7 +173,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "Il_Collegio_Tremon.mp3", true)
             break;
         }
-
+        case "arrapay" : {
+            await callSong(user, command, message, "BABY_EARRAPE_Tremon.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
@@ -290,19 +293,29 @@ bot.on("message", async (message) => {
                     "inline": true
                     },
                     {
-                        "name": "ivano",
-                        "value": "‎",
-                        "inline": true
+                    "name": "ivano",
+                    "value": "‎",
+                    "inline": true
                     },
                     {
-                        "name": "catzo",
-                        "value": "‎",
-                        "inline": true
+                    "name": "catzo",
+                    "value": "‎",
+                    "inline": true
                     },
                     {
-                        "name": "aiudame",
-                        "value": "‎",
-                        "inline": true
+                    "name": "giovedì",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "arrapay",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "aiudame",
+                    "value": "‎",
+                    "inline": true
                     }
                 ]
             });
