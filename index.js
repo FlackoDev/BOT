@@ -177,6 +177,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "BABY_EARRAPE_Tremon.mp3", true)
             break;
         }
+        case "maxplanck" : {
+            await callSong(user, command, message, "speciaERR.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
@@ -309,6 +313,11 @@ bot.on("message", async (message) => {
                     },
                     {
                     "name": "arrapay",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "maxplanck",
                     "value": "‎",
                     "inline": true
                     },
