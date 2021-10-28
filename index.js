@@ -46,7 +46,8 @@ bot.on('ready', () => {
 });
 
 bot.on("voiceStateUpdate", async (oldVc, newVc) => {
-    if(channelIDs.includes(parseInt(newVc.channelID))) {
+    if(channelIDs.includes(parseInt(newVc.channelID)) && newVc.member.id != bot.user.id) {
+        console.log("Saying CIAO")
         let connection = await newVc.channel.join()
         let disp = connection.play(__dirname + "/MUSIC/RUTTO(ciao).mp3")
 
@@ -54,7 +55,7 @@ bot.on("voiceStateUpdate", async (oldVc, newVc) => {
             if(!s) connection.disconnect()
         })
     }
-});
+})
 
 bot.on("message", async (message) => {
     if (message.author.bot) return;
