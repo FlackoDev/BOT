@@ -4,12 +4,11 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const mm = require('music-metadata');
-
-const prefix = "-";
-
 require("dotenv").config();
 
 /* ################################# */
+
+let prefix = "-";
 let isLoop = false
 
 bot.on('ready', () => {
