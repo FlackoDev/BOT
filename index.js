@@ -1,4 +1,4 @@
-//(Production) npm run start
+//(Production) npm run start (IL DIO GHANE)
 //(Development) npm run dev
 
 const Discord = require("discord.js");
@@ -8,12 +8,35 @@ require("dotenv").config();
 
 /* ################################# */
 
-let prefix = "-";
+let prefix = "-"
 let isLoop = false
+let channelIDs = [880142443666890772 ,880142490076868681 ,880142509089624164,880142844684300379,880151088790142976,880141903448903780,900371757234520174,894223161065885716]
+/*
+    [nome] - [ID]
+    880142443666890772 - Vocale 1
+    880142490076868681 - Vocale 2
+    880142509089624164 - Vocale 3
+    880142844684300379 - BOT
+    880151088790142976 - Temporaneo
+    880141903448903780 - AFK
+    900371757234520174 - BOT a pedali
+    894223161065885716 - no snitch
+*/
 
 bot.on('ready', () => {
     bot.user.setActivity('Le Fiche Bianche', { type: 'WATCHING' })
     console.log(`Logged in as ${bot.user.tag}!`);
+});
+
+bot.on("voiceStateUpdate", async (oldVc, newVc) => {
+    if(channelIDs.includes(parseInt(newVc.channelID))) {
+        let connection = await newVc.channel.join()
+        let disp = connection.play(__dirname + "/MUSIC/RUTTO(ciao).mp3")
+
+        disp.on("speaking", (s) => {
+            if(!s) connection.disconnect()
+        })
+    }
 });
 
 bot.on("message", async (message) => {
