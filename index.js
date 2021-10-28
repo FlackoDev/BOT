@@ -182,7 +182,7 @@ bot.on("message", async (message) => {
             break;
         }
         case "rutto" : {
-            await callSong(user, command, message, "RUTTO.mp3", true)
+            await callSong(user, command, message, "RUTTO(ciao).mp3", true)
             break;
         }
         /* ################################# */
