@@ -1,17 +1,21 @@
 //(Production) npm run start (IL DIO GHANE)
 //(Development) npm run dev
-
-const Discord = require("discord.js");
-const bot = new Discord.Client();
-const mm = require('music-metadata');
-require("dotenv").config();
-
-/* ################################# */
-
-let prefix = "-"
-let isLoop = false
-let channelIDs = [880142443666890772 ,880142490076868681 ,880142509089624164,880142844684300379,880151088790142976,880141903448903780,900371757234520174,894223161065885716]
 /*
+    --FILE
+    message.channel.send({
+        files: [{
+            attachment: __dirname + '',
+            name: ''
+        }]
+    })
+
+    --LINK
+    message.channel.send({
+        files: ['']
+    })
+*/
+/*
+    # ChannelIDs (IL PORCO DIS)
     [nome] - [ID]
     880142443666890772 - Vocale 1
     880142490076868681 - Vocale 2
@@ -22,6 +26,19 @@ let channelIDs = [880142443666890772 ,880142490076868681 ,880142509089624164,880
     900371757234520174 - BOT a pedali
     894223161065885716 - no snitch
 */
+
+/* ################################# */
+
+const Discord = require("discord.js");
+const bot = new Discord.Client();
+const mm = require('music-metadata');
+require("dotenv").config();
+
+let prefix = "-"
+let isLoop = false
+let channelIDs = [880142443666890772 ,880142490076868681 ,880142509089624164,880142844684300379,880151088790142976,880141903448903780,900371757234520174,894223161065885716]
+
+/* ################################# */
 
 bot.on('ready', () => {
     bot.user.setActivity('Le Fiche Bianche', { type: 'WATCHING' })
@@ -445,21 +462,6 @@ async function callSong(user, command, message, songName, sendSongText) {
         message.channel.send("Devi essere in una chat vocale!")
     }
 }
-
-/*
-    --FILE
-    message.channel.send({
-        files: [{
-            attachment: __dirname + '',
-            name: ''
-        }]
-    })
-
-    --LINK
-    message.channel.send({
-        files: ['']
-    })
-*/
 
 /* ################################# */
 
