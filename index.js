@@ -181,6 +181,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "speciaERR.mp3", true)
             break;
         }
+        case "rutto" : {
+            await callSong(user, command, message, "RUTTO.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
@@ -323,6 +327,11 @@ bot.on("message", async (message) => {
                     },
                     {
                     "name": "aiudame",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "rutto",
                     "value": "‎",
                     "inline": true
                     }
