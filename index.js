@@ -225,6 +225,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "RUTTO(ciao).mp3", true)
             break;
         }
+        case "sburre" : {
+            await callSong(user, command, message, "bottiglie.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
