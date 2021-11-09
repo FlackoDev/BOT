@@ -229,6 +229,14 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "bottiglie.mp3", true)
             break;
         }
+        case "devour" : {
+            await callSong(user, command, message, "THE_ROCK.mp3", true)
+            break;
+        }
+        case "errepai" : {
+            await callSong(user, command, message, "errepai.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
@@ -376,6 +384,16 @@ bot.on("message", async (message) => {
                     },
                     {
                     "name": "rutto",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "devour",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "errepai",
                     "value": "‎",
                     "inline": true
                     }
