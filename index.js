@@ -45,7 +45,7 @@ bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`);
 });
 
-bot.on("voiceStateUpdate", async (oldVc, newVc) => {
+/*bot.on("voiceStateUpdate", async (oldVc, newVc) => {
     if(channelIDs.includes(parseInt(newVc.channelID)) && newVc.member.id != bot.user.id) {
         console.log("Saying CIAO")
         let connection = await newVc.channel.join()
@@ -56,6 +56,7 @@ bot.on("voiceStateUpdate", async (oldVc, newVc) => {
         })
     }
 })
+*/
 
 bot.on("message", async (message) => {
     if (message.author.bot) return;
