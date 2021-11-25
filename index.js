@@ -242,7 +242,10 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "gia-lo-sai-last-friday-night-rmx.mp3", true)
             break;
         }
-        
+        case "soldi" : {
+            await callSong(user, command, message, "Lucia_fotte_soldi.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
@@ -400,6 +403,16 @@ bot.on("message", async (message) => {
                     },
                     {
                     "name": "errepai",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "già",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "soldi",
                     "value": "‎",
                     "inline": true
                     }
