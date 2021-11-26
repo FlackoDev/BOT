@@ -246,6 +246,34 @@ bot.on("message", async (message) => {
             await callSong(user, command, message, "Lucia_fotte_soldi.mp3", true)
             break;
         }
+        case "pollo" : {
+            await callSong(user, command, message, "Ali.mp3", true)
+            break;
+        }
+        case "bruno" : {
+            await callSong(user, command, message, "Bruno.mp3", true)
+            break;
+        }
+        case "gabibbo" : {
+            await callSong(user, command, message, "Gabibbo.mp3", true)
+            break;
+        }
+        case "google" : {
+            await callSong(user, command, message, "Google.mp3", true)
+            break;
+        }
+        case "cena" : {
+            await callSong(user, command, message, "John_Cena.mp3", true)
+            break;
+        }
+        case "silvio" : {
+            await callSong(user, command, message, "Silvio.mp3", true)
+            break;
+        }
+        case "vendetta" : {
+            await callSong(user, command, message, "TRUCE.mp3", true)
+            break;
+        }
         /* ################################# */
         // Usefull things
         /* ################################# */
