@@ -443,6 +443,41 @@ bot.on("message", async (message) => {
                     "name": "soldi",
                     "value": "‎",
                     "inline": true
+                    },// SI
+                    {
+                    "name": "pollo",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "bruno",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "gabibbo",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "google",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "cena",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "silvio",
+                    "value": "‎",
+                    "inline": true
+                    },
+                    {
+                    "name": "vendetta",
+                    "value": "‎",
+                    "inline": true
                     }
                 ]
             });
