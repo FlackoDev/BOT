@@ -286,197 +286,197 @@ bot.on("message", async (message) => {
                 "fields": [
                     {
                     "name": "vaffanchiulo",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "fifa17",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "cinese",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "fame",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "raulo",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "nonna_macu",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "catafratto",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "feng",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "pizza",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "andrea",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "jackie",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "willi",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "miky",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "vola",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "fifa20",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "giusè",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "mussolini",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "mark's_pizzeria",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "er(mano)",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "skopando",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "neopatentato",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "ivano",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "catzo",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "giovedì",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "arrapay",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "maxplanck",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "aiudame",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "rutto",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "devour",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "errepai",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "già",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "soldi",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },// SI
                     {
                     "name": "pollo",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "bruno",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "gabibbo",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "google",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "cena",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "silvio",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     },
                     {
                     "name": "vendetta",
-                    "value": "‎",
+                    "value": ".",
                     "inline": true
                     }
                 ]
