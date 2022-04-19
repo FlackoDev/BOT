@@ -481,8 +481,85 @@ bot.on("message", async (message) => {
                     }
                 ]
             });
+            const embed1 = new Discord.MessageEmbed({
+                "title": "Aiudame",
+                "description" : "Ecct i comandi GUCCI \nPrefix comandi -> ' **" + prefix + "** '\n\n\n **Lista Comandi**",
+                "color": 53380,
+                "fields": [
+                    {
+                    "name": "maxplanck",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "aiudame",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "rutto",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "devour",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "errepai",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "già",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "soldi",
+                    "value": ".",
+                    "inline": true
+                    },// SI
+                    {
+                    "name": "pollo",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "bruno",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "gabibbo",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "google",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "cena",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "silvio",
+                    "value": ".",
+                    "inline": true
+                    },
+                    {
+                    "name": "vendetta",
+                    "value": ".",
+                    "inline": true
+                    }
+                ]
+            });
             
-            message.channel.send(embed)
+            message.channel.send(embed,embed1)
             break;
         }
 
